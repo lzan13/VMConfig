@@ -12,8 +12,8 @@ VMConfig
 [iTerm2Andzsh](./Docs/iTerm2Andzsh.md) 介绍iTerm2 以及 zsh 的安装和配置
 
 ### Config
-- [vmalias.sh](./vmalias.sh) 保存自己常用的别名配置，包括`adb`、`keytool`、`git`等相关命令  
-- [vmenv.sh](./vmenv.sh) 保存环境变量配置，这个需要根据自己电脑目录进行配置
+- [vmalias.sh](./Configs/vmalias.sh) 保存自己常用的别名配置，包括`adb`、`keytool`、`git`等相关命令  
+- [vmenv.sh](./Configs/vmenv.sh) 保存环境变量配置，这个需要根据自己电脑目录进行配置
 
 ### 附录 
 - gitignore `GitHub`官方提供的`.gitignore`供大家使用：[gitignore](https://github.com/github/gitignore)
