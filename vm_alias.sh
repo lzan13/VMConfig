@@ -1,16 +1,15 @@
 
+### 配置常用别名
+
 alias vizshrc="vim ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias lls="ls -als"
 
 ### adb 相关命令
+alias adbd="adb devices"
+alias adbs="adb shell"
 alias adblg="adb -s LGD8577eaf0ba"
-alias adbhw="adb -s JRZ5PNONDAYSOZ4T"
 alias adbmi="adb -s 601519cc"
-alias adbmi4="adb -s 9e93127e"
 alias adbmz="adb -s 810EBND57XTM"
-alias lghy="adb -s 00ff975b15879e11 shell sh /data/data/me.piebridge.brevent/brevent.sh"
-alias mihy="adb -s 8453c86 shell sh /data/data/me.piebridge.brevent/brevent.sh"
 
 ### keytool 相关命令
 alias kt4jks="keytool -list -v -keystore"
@@ -53,18 +52,10 @@ alias gre="git rebase"
 
 ### git fetch/push/pull
 alias gfh="git fetch"
-alias gfhe="git fetch easemob"
-alias gfhl="git fetch lzan13"
 alias gfho="git fetch origin"
 alias gpl="git pull"
-alias gple="git pull easemob"
-alias gpll="git pull lzan13"
 alias gplo="git pull origin"
 alias gph="git push"
-alias gphe="git push easemob"
-alias gphl="git push lzan13"
-alias gphld="git push lzan13 dev"
-alias gphlm="git push lzan13 master"
 alias gpho="git push origin"
 alias gphod="git push origin dev"
 alias gphom="git push origin master"
