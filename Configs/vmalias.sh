@@ -1,4 +1,3 @@
-
 ### 配置常用别名
 
 alias vizshrc="vim ~/.zshrc"
@@ -36,7 +35,7 @@ alias gckb="git checkout -b"
 
 ### git clone
 alias gce="git clone"
-alias gceb="git clone -b"
+alias gceb="git clone -b"        
 alias gdf="git diff"
 
 ### git log
