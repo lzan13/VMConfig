@@ -38,10 +38,32 @@ plugins=(
   zsh-autosuggestions 
 )
 ...
+# 配置默认用户名
+DEFAULT_USER="lz"
+...
 ### 加载自定义别名配置
 source ~/.VMConfig/vm_alias.sh
 ### 加载环境变量配置
 source ~/.VMConfig/vm_env.sh
+```
+
+在使用`agnoster`主题的时候，如果想修改终端显示的用户名为自定义，需要同步修改主题文件，然后修改`.zshrc`配置文件中的`DEFAULT_USER`
+```
+# Context: user@hostname (who am I and where am I)
+prompt_context() {
+  # if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+  #   prompt_segment black default "%(!.%{%F{yellow}%}.)%n@%m"
+  # fi
+  if [ $DEFAULT_USER ]; then
+    prompt_segment 6 black "%(!.%{%F{yellow}%}.)$DEFAULT_USER"
+  fi
+}
+...
+# Dir: current working directory
+prompt_dir() {
+  # prompt_segment blue $CURRENT_FG '%~'
+  prompt_segment blue black '%C'
+}
 ```
 
 #### 配置自己的 alias.sh 文件：

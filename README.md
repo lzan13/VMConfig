@@ -5,11 +5,12 @@ VMConfig
 
 ### 目录
 - [Config](./Config) 存放配置文件
-- [Docs](./Docs) 说明文章
+- [Docs](./Docs) 常用的一些配置说明文章，主要是在新环境配置时参考
 - [Fonts](./Fonts) iTerm2 特定主题需要的字体
 
 ### Docs
-[iTerm2Andzsh](./Docs/iTerm2Andzsh.md) 介绍iTerm2 以及 zsh 的安装和配置
+[iTerm2Andzsh](./Docs/iTerm2Andzsh.md) 介绍`iTerm2`以及`zsh`的安装和配置
+[nvmControlnode](./Docs/nvmControlnode.md) 介绍`nvm`管理`node`
 
 ### Config
 - [vmalias.sh](./Configs/vmalias.sh) 保存自己常用的别名配置，包括`adb`、`keytool`、`git`等相关命令  
