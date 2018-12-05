@@ -58,6 +58,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+# 配置启用插件
 plugins=(
   brew 
   git 
@@ -99,9 +100,9 @@ source $ZSH/oh-my-zsh.sh
 DEFAULT_USER="lz"
 
 ### 加载自定义别名配置
-source ~/.VMConfig/vm_alias.sh
+source ~/.VMConfig/Configs/vmalias.sh
 ### 加载环境变量配置
-source ~/.VMConfig/vm_env.sh
+source ~/.VMConfig/Configs/vmenv.sh
 
 ### 语法高亮
 # source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
