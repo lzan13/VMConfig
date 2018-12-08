@@ -1,9 +1,24 @@
 ### 配置常用别名
 
-alias vizshrc="vim ~/.zshrc"
+
+##################################################################
+### 配置 相关命令
+##################################################################
+### 系统命令
 alias lls="ls -als"
 
+### 编辑 .zshrc 配置文件
+alias vzshrc="vim ~/.zshrc"
+alias szshrc="source ~/.zshrc"
+
+### open vscode
+alias vcode="open -a /Application/Visual Studio Code.app $1"
+
+
+##################################################################
 ### adb 相关命令
+##################################################################
+### adb devices
 alias adbd="adb devices"
 alias adbs="adb shell"
 alias adblg="adb -s LGD8577eaf0ba"
@@ -14,7 +29,11 @@ alias adbmz="adb -s 810EBND57XTM"
 alias kt4jks="keytool -list -v -keystore"
 alias kt4rsa="keytool -printcert -file"
 
+
+##################################################################
 ### git 相关命令
+##################################################################
+### git add
 alias ga="git add"
 alias gaa="git add ."
 
@@ -85,9 +104,10 @@ alias gshp="git stash pop"
 alias gtg="git tag"
 alias gtgd="git tag -d"
 
-### open vscode
-alias vcode="open -a /Application/Visual Studio Code.app $1"
 
+##################################################################
+### node npm 相关
+##################################################################
 ### alias for cnpm 配置了之后就可以使用 cnpm 进行管理 npm 的包了，参考 https://npm.taobao.org/
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
   --cache=$HOME/.npm/.cache/cnpm \
