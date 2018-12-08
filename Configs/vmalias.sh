@@ -12,7 +12,7 @@ alias vzshrc="vim ~/.zshrc"
 alias szshrc="source ~/.zshrc"
 
 ### open vscode
-alias vcode="open -a /Application/Visual Studio Code.app $1"
+alias vcode="open -a /Application/Visual\ Studio\ Code.app $1"
 
 
 ##################################################################
