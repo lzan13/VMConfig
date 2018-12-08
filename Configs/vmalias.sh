@@ -84,3 +84,12 @@ alias gshp="git stash pop"
 ### git tag
 alias gtg="git tag"
 alias gtgd="git tag -d"
+
+### open vscode
+alias vcode="open -a /Application/Visual Studio Code.app $1"
+
+### alias for cnpm 配置了之后就可以使用 cnpm 进行管理 npm 的包了，参考 https://npm.taobao.org/
+alias cnpm="npm --registry=https://registry.npm.taobao.org \
+  --cache=$HOME/.npm/.cache/cnpm \
+  --disturl=https://npm.taobao.org/dist \
+  --userconfig=$HOME/.cnpmrc"
