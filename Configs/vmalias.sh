@@ -11,8 +11,9 @@ alias lls="ls -als"
 alias vzshrc="vim ~/.zshrc"
 alias szshrc="source ~/.zshrc"
 
-### open vscode
-alias vcode="open -a /Application/Visual\ Studio\ Code.app $1"
+### 直接在终端调用应用打开文件
+### vscode
+alias vcode="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin"
 
 
 ##################################################################
