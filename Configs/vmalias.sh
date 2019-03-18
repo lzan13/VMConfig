@@ -13,7 +13,7 @@ alias szshrc="source ~/.zshrc"
 
 ### 直接在终端调用应用打开文件
 ### vscode
-alias vcode="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin"
+alias vcode="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 
 
 ##################################################################
