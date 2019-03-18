@@ -7,7 +7,7 @@ export ZSH="/Users/lzan13/.oh-my-zsh"
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="ys"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -100,9 +100,10 @@ source $ZSH/oh-my-zsh.sh
 DEFAULT_USER="lz"
 
 ### 加载自定义别名配置
-source ~/.VMConfig/Configs/vmalias.sh
+source ~/.vmconfig/Configs/vmalias.sh
 ### 加载环境变量配置
-source ~/.VMConfig/Configs/vmenv.sh
+source ~/.vmconfig/Configs/vmenv.sh
 
 ### 语法高亮
 # source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+

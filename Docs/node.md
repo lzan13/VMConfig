@@ -11,4 +11,6 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
   --cache=$HOME/.npm/.cache/cnpm \
   --disturl=https://npm.taobao.org/dist \
   --userconfig=$HOME/.cnpmrc"
+# 或者安装 cnpm 来下载
+npm install cnpm -g --registry=https://registry.npm.taobao.org
 ```
