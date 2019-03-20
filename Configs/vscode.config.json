@@ -1,4 +1,4 @@
-// vscode 个人配置文件，做个备份
+// vscode 个人配置文件
 {
     // 是否展示欢迎页
     "workbench.startupEditor": "none",
@@ -16,8 +16,14 @@
     "eslint.autoFixOnSave": true,
     // 添加 vue 支持
     "eslint.validate": [
+        "css",
+        "html",
         "javascript",
         "javascriptreact",
+        {
+            "language": "css",
+            "autoFix": true
+        },
         {
             "language": "html",
             "autoFix": true
