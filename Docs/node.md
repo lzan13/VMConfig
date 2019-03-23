@@ -14,3 +14,8 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
 # 或者安装 cnpm 来下载
 npm install cnpm -g --registry=https://registry.npm.taobao.org
 ```
+
+```bash
+# 查看全局安装的模块儿
+npm list --depth=0 -global
+```
