@@ -74,11 +74,11 @@ alias gfh="git fetch"
 alias gfho="git fetch origin"
 alias gpl="git pull"
 alias gplo="git pull origin"
-alias gplod="git pull origin dev"
+alias gplod="git pull origin develop"
 alias gplom="git pull origin master"
 alias gph="git push"
 alias gpho="git push origin"
-alias gphod="git push origin dev"
+alias gphod="git push origin develop"
 alias gphom="git push origin master"
 
 ### git remote 
