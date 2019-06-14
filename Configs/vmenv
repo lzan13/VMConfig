@@ -10,13 +10,13 @@ export PATH=$ANDROID_SDK:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$PATH
 export ANDROID_NDK="$HOME/Develop/Android/ndk"
 export PATH=$ANDROID_NDK:$PATH
 
-### set gradle path
-# export GRADLE_HOME="$HOME/Develop/Android/gradle-4.4"
-# export PATH=$PATH:$GRADLE_HOME/bin
+### set Flutter path
+export FLUTTER="$HOME/Develop/Flutter"
+export PATH=$FLUTTER/bin:$PATH
 
 ### set jadx path
 export JADX="$HOME/Develop/Tools/jadx"
-export PATH=$PATH:$JADX/bin
+export PATH=$JADX/bin:$PATH
 
 ### nvm path
 export NVM_DIR="$HOME/.nvm"
