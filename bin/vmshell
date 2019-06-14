@@ -8,7 +8,7 @@
 # -------------------------------------
 
 echo ""
-cat ./vmloft
+cat ../vmloft
 echo ""
 echo "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo "┃ 自定义 Shell 命令小工具, 省去记录各种命令的烦恼, 使用方式:"
@@ -16,10 +16,10 @@ echo "┃ 直接输入对应命令前的字母, 如果命令需要二次确认, 
 echo "┃ 例入要显示隐藏文件只需要输入:"
 echo "┃ a 1"
 echo "┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "┣━ a.显示隐藏文件 1-YES, 0-NO"
-echo "┣━ b.允许任何来源 1-YES, 0-NO; 允许任何来源，解决三方汉化和破击软件无法安装问题"
-echo "┣━ "
-echo "┣━ "
+echo "┣━ a.显示隐藏文件 0-NO"
+echo "┣━ b.允许任何来源 0-NO 允许任何来源，解决三方汉化和破击软件无法安装问题"
+echo "┣━ c.显示文件路径 0-NO"
+echo "┣━ d.底部文件路径 0-NO"
 echo "┣━ "
 echo "┣━ q.退出命令"
 echo "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
@@ -35,6 +35,10 @@ control(){
         showAllFile $code;;
         b)
         showAnySource $code;;
+        c)
+        showFilePath $code;;
+        d)
+        showBottomPath $code;;
         q)
         exit 0;;
         *)
@@ -67,11 +71,31 @@ showAllFile(){
 
 # 允许任何来源，解决三方汉化和破击软件无法安装问题
 showAnySource(){
-    if [ $1=1 ]; then
-        sudo spctl --master-disable
-    else
+    if [ $1 != 0 ]; then
         sudo spctl --master-enable
+    else
+        sudo spctl --master-disable
     fi
+}
+
+# 显示文件路径
+showFilePath(){
+    if [ $1 != 0 ]; then
+        defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES;
+    else
+        defaults write com.apple.finder _FXShowPosixPathInTitle -bool NO;
+    fi
+    killall Finder
+}
+
+# 底部文件路径
+showBottomPath(){
+    if [ $1 != 0 ]; then
+        defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES;
+    else
+        defaults write com.apple.finder _FXShowPosixPathInTitle -bool NO;
+    fi
+    killall Finder
 }
 
 # 等待命令输入

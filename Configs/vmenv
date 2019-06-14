@@ -1,3 +1,7 @@
+### set custom shell path
+export VMSHELL="$HOME/.vmconfig"
+export PATH=$PATH:$VMSHELL/bin
+
 ### set Android sdk path
 export ANDROID_SDK="$HOME/Develop/Android/sdk"
 export PATH=$ANDROID_SDK:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$PATH
