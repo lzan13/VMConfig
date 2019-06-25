@@ -11,7 +11,7 @@ export ANDROID_NDK="$HOME/Develop/Android/ndk"
 export PATH=$ANDROID_NDK:$PATH
 
 ### set Flutter path
-export FLUTTER="$HOME/Develop/Flutter"
+export FLUTTER="$HOME/Develop/Android/flutter"
 export PATH=$FLUTTER/bin:$PATH
 
 ### set jadx path
