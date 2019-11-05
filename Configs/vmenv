@@ -4,7 +4,7 @@ export PATH=$PATH:$VMSHELL/bin
 
 ### set Android sdk path
 export ANDROID_SDK="$HOME/Develop/Android/sdk"
-export PATH=$ANDROID_SDK:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$PATH
+export PATH=$ANDROID_SDK:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$ANDROID_SDK/build-tools/28.0.3:$PATH
 
 ### set Android ndk path
 export ANDROID_NDK="$HOME/Develop/Android/ndk"
