@@ -109,6 +109,19 @@ alias gtgd="git tag -d"
 
 
 ##################################################################
+### svn 相关命令
+##################################################################
+alias sct="svn checkout"
+alias sa="svn add"
+alias saa="svn add *"
+alias sct="svn commit"
+alias sctm="svn commit -m"
+alias sup="svn update"
+alias sdl="svn delete"
+
+
+
+##################################################################
 ### node npm 相关
 ##################################################################
 ### alias for cnpm 配置了之后就可以使用 cnpm 进行管理 npm 的包了，参考 https://npm.taobao.org/
