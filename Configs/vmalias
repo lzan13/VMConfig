@@ -112,6 +112,7 @@ alias gtgd="git tag -d"
 ### svn 相关命令
 ##################################################################
 alias sct="svn checkout"
+alias ss="svn status"
 alias sa="svn add"
 alias saa="svn add *"
 alias sct="svn commit"
