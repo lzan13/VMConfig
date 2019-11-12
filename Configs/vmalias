@@ -113,13 +113,14 @@ alias gtgd="git tag -d"
 ##################################################################
 alias sct="svn checkout"
 alias ss="svn status"
+alias sdf="svn diff"
+alias sme="svn merge"
 alias sa="svn add"
 alias saa="svn add *"
 alias sct="svn commit"
 alias sctm="svn commit -m"
 alias sup="svn update"
 alias sdl="svn delete"
-
 
 
 ##################################################################
