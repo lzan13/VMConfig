@@ -2,21 +2,31 @@
 export VMSHELL="$HOME/.vmconfig"
 export PATH=$PATH:$VMSHELL/bin
 
+
 ### set Android sdk path
 export ANDROID_SDK="$HOME/Develop/Android/sdk"
 export PATH=$ANDROID_SDK:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$ANDROID_SDK/build-tools/28.0.3:$PATH
+
 
 ### set Android ndk path
 export ANDROID_NDK="$HOME/Develop/Android/ndk"
 export PATH=$ANDROID_NDK:$PATH
 
+
 ### set Flutter path
 export FLUTTER="$HOME/Develop/Android/flutter"
 export PATH=$FLUTTER/bin:$PATH
+export PATH=$FLUTTER/bin/cache/dart-sdk/bin:$PATH
+
+### set Flutter china mirror image
+export PUB_HOSTED_URL=https://pub.flutter-io.cn
+export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+
 
 ### set jadx path
 export JADX="$HOME/Develop/Tools/jadx"
 export PATH=$JADX/bin:$PATH
+
 
 ### nvm path
 export NVM_DIR="$HOME/.nvm"
