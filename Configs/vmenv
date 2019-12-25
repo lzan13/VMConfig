@@ -15,6 +15,7 @@ export PATH=$ANDROID_NDK:$PATH
 
 ### set Flutter path
 export FLUTTER="$HOME/Develop/Android/flutter"
+#export FLUTTER="/Users/lzan13/Library/Flutter/v1.9.1+hotfix.4/flutter"
 export PATH=$FLUTTER/bin:$PATH
 export PATH=$FLUTTER/bin/cache/dart-sdk/bin:$PATH
 
