@@ -16,11 +16,11 @@ echo "┃ 直接输入对应命令前的字母, 如果命令需要二次确认, 
 echo "┃ 例入要显示隐藏文件只需要输入:"
 echo "┃ a 1"
 echo "┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "┣━ a.显示隐藏文件 0-NO"
-echo "┣━ b.允许任何来源 0-NO 允许任何来源，解决三方汉化和破击软件无法安装问题"
-echo "┣━ c.显示文件路径 0-NO"
-echo "┣━ d.底部文件路径 0-NO"
-echo "┣━ "
+echo "┣━ a.显示隐藏文件 0-NO 1-YES"
+echo "┣━ b.允许任何来源 0-NO 1-YES 允许任何来源，解决三方汉化和破击软件无法安装问题"
+echo "┣━ c.显示文件路径 0-NO 1-YES"
+echo "┣━ d.底部文件路径 0-NO 1-YES"
+echo "┣━ e.多开微信"
 echo "┣━ q.退出命令"
 echo "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 # 根据输入执行响应的操作
@@ -39,6 +39,8 @@ control(){
         showFilePath $code;;
         d)
         showBottomPath $code;;
+        e)
+        openMultipleWeChat;;
         q)
         exit 0;;
         *)
@@ -96,6 +98,10 @@ showBottomPath(){
         defaults write com.apple.finder _FXShowPosixPathInTitle -bool NO;
     fi
     killall Finder
+}
+# 多开微信
+openMultipleWeChat(){
+    nohup /Applications/WeChat.app/Contents/MacOS/WeChat > /dev/null 2>&1 &
 }
 
 # 等待命令输入
