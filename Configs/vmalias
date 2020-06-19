@@ -68,6 +68,8 @@ alias glgs="git log --stat"
 
 ### git merge/rebase
 alias gme="git merge"
+alias gmem="git merge master"
+alias gmed="git merge develop"
 alias gre="git rebase"
 
 ### git fetch/push/pull
