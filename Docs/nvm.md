@@ -7,9 +7,9 @@ mvm 管理 node
 `nvm`开源地址 https://github.com/creationix/nvm
 可以使用以下命令进行安装：
 ```
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 # or
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 ```
 
 ### 管理 node

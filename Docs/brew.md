@@ -21,4 +21,5 @@ brew link <package_name>        # 将软件的当前最新版本软链到`/usr/l
 brew unlink <package_name>      # 将软件在`/usr/local`目录下的软链接删除。
 brew info                       # 显示软件的信息 
 brew deps                       # 显示包依赖
+brew services start/stop <service_name> #服务启动与停止
 ````
