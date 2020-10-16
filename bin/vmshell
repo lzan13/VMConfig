@@ -21,26 +21,29 @@ echo "┣━ b.允许任何来源 0-NO 1-YES 允许任何来源，解决三方�
 echo "┣━ c.显示文件路径 0-NO 1-YES"
 echo "┣━ d.底部文件路径 0-NO 1-YES"
 echo "┣━ e.多开微信"
+echo "┣━ f.输出当前目录文件名到JSON 0-隐藏详情 1-输出详情"
 echo "┣━ q.退出命令"
-echo "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 # 根据输入执行响应的操作
 control(){
     # 等待键盘输入,执行对应的命令,
-    read -p "━━ 输入要执行的命令: " input code
-    if [ ! -n "$code" ]; then
-        code=1
+    read -p "┣━ 输入要执行的命令: " command arg1
+    if [ ! -n "$arg1" ]; then
+        arg1=1
     fi
-    case $input in
+    case $command in
         a)
-        showAllFile $code;;
+        showAllFile $arg1;;
         b)
-        showAnySource $code;;
+        showAnySource $arg1;;
         c)
-        showFilePath $code;;
+        showFilePath $arg1;;
         d)
-        showBottomPath $code;;
+        showBottomPath $arg1;;
         e)
         openMultipleWeChat;;
+        f)
+        echoFilenamesToJSON $arg1;;
         q)
         exit 0;;
         *)
@@ -51,12 +54,12 @@ control(){
 # 输出信息
 echoMsg(){
     msg=$1
-    echo "━━ $msg"
+    echo "┣━ $msg"
 }
 
 # 显示错误提示
 showError(){
-    echoMsg "无法识别对应命令 ( ┭┮﹏┭┮ )"
+    echoMsg "┣━ 无法识别对应命令 ( ┭┮﹏┭┮ )"
     # 出错之后等待命令输入
     control
 }
@@ -102,6 +105,22 @@ showBottomPath(){
 # 多开微信
 openMultipleWeChat(){
     nohup /Applications/WeChat.app/Contents/MacOS/WeChat > /dev/null 2>&1 &
+}
+# 输出当前目录文件名到json
+echoFilenamesToJSON(){
+    echoMsg "1.移除上次生成文件" 
+    rm -rf ./filenames.json
+
+    echoMsg "2.准备输出文件夹下文件名" 
+    files=$(ls .)
+    for filename in $files
+    do
+        if [ $1 != 0 ]; then
+            echoMsg " > $filename"
+        fi
+        echo $filename >> ./filenames.json
+    done
+    echoMsg "3.输出文件名完成 ^_^ ~" 
 }
 
 # 等待命令输入

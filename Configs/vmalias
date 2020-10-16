@@ -22,10 +22,8 @@ alias vcode="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/c
 ### adb devices
 alias adbd="adb devices"
 alias adbs="adb shell"
-alias adblg="adb -s LGD8577eaf0ba"
-alias adbmi="adb -s 601519cc"
-alias adbmz="adb -s 810EBND57XTM"
-alias adbop="adb -s 3c76ba0"
+alias adbvivo="adb -s 858a3e78"
+alias adboppo="adb -s 8e5afad7"
 
 ### keytool 相关命令
 alias kt4jks="keytool -list -v -keystore"
