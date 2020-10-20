@@ -14,14 +14,19 @@ echo "┏━━━━━━━━━━━━━━━━━━━━━━━�
 echo "┃ 自定义 Shell 命令小工具, 省去记录各种命令的烦恼, 使用方式:"
 echo "┃ 直接输入对应命令前的字母, 如果命令需要二次确认, 只需在命令后紧跟确认码 (1 or 0) 即可, 记得回车"
 echo "┃ 例入要显示隐藏文件只需要输入:"
-echo "┃ a 1"
+echo "┃ a0 1"
 echo "┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "┣━ a.显示隐藏文件 0-NO 1-YES"
-echo "┣━ b.允许任何来源 0-NO 1-YES 允许任何来源，解决三方汉化和破击软件无法安装问题"
-echo "┣━ c.显示文件路径 0-NO 1-YES"
-echo "┣━ d.底部文件路径 0-NO 1-YES"
-echo "┣━ e.多开微信"
-echo "┣━ f.输出当前目录文件名到JSON 0-隐藏详情 1-输出详情"
+echo "┣━ a0.显示隐藏文件 0-NO 1-YES"
+echo "┣━ a1.允许任何来源 0-NO 1-YES 允许任何来源，解决三方汉化和破击软件无法安装问题"
+echo "┣━ a2.显示文件路径 0-NO 1-YES"
+echo "┣━ a3.底部文件路径 0-NO 1-YES"
+echo "┣━ a4.调整启动台应用横向排列 Default-恢复默认 <int>-个数"
+echo "┣━ a5.调整启动台应用纵向排列 Default-恢复默认 <int>-个数"
+echo "┣━ "
+echo "┣━ f0.输出当前目录文件名到JSON 0-隐藏详情 1-输出详情"
+echo "┣━ "
+echo "┣━ o0.多开微信"
+echo "┣━ "
 echo "┣━ q.退出命令"
 echo "┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 # 根据输入执行响应的操作
@@ -32,18 +37,25 @@ control(){
         arg1=1
     fi
     case $command in
-        a)
+        a0)
         showAllFile $arg1;;
-        b)
+        a1)
         showAnySource $arg1;;
-        c)
+        a2)
         showFilePath $arg1;;
-        d)
+        a3)
         showBottomPath $arg1;;
-        e)
-        openMultipleWeChat;;
-        f)
+        a4)
+        setLauncherRows $arg1;;
+        a5)
+        setLauncherCols $arg1;;
+        
+        f0)
         echoFilenamesToJSON $arg1;;
+
+        o0)
+        openMultipleWeChat;;
+        
         q)
         exit 0;;
         *)
@@ -51,20 +63,7 @@ control(){
     esac
 }
 
-# 输出信息
-echoMsg(){
-    msg=$1
-    echo "┣━ $msg"
-}
-
-# 显示错误提示
-showError(){
-    echoMsg "┣━ 无法识别对应命令 ( ┭┮﹏┭┮ )"
-    # 出错之后等待命令输入
-    control
-}
-
-# 显示隐藏文件
+# 显示隐藏文
 showAllFile(){
     if [ $1 != 0 ];then
         defaults write com.apple.finder AppleShowAllFiles YES;
@@ -102,10 +101,27 @@ showBottomPath(){
     fi
     killall Finder
 }
-# 多开微信
-openMultipleWeChat(){
-    nohup /Applications/WeChat.app/Contents/MacOS/WeChat > /dev/null 2>&1 &
+
+# 调整启动台应用横向排列
+setLauncherRows(){
+    if [ $1 == Default ]; then
+        defaults write com.apple.dock springboard-rows Default;
+    else
+        defaults write com.apple.dock springboard-rows -int $1;
+    fi
+    killall Dock
 }
+
+# 调整启动台应用纵向排列
+setLauncherRows(){
+    if [ $1 == Default ]; then
+        defaults write com.apple.dock springboard-columns Default;
+    else
+        defaults write com.apple.dock springboard-columns -int $1;
+    fi
+    killall Dock
+}
+
 # 输出当前目录文件名到json
 echoFilenamesToJSON(){
     echoMsg "1.移除上次生成文件" 
@@ -121,6 +137,27 @@ echoFilenamesToJSON(){
         echo $filename >> ./filenames.json
     done
     echoMsg "3.输出文件名完成 ^_^ ~" 
+}
+
+# 多开微信
+openMultipleWeChat(){
+    nohup /Applications/WeChat.app/Contents/MacOS/WeChat > /dev/null 2>&1 &
+}
+
+####################################
+# 公共方法
+####################################
+# 输出信息
+echoMsg(){
+    msg=$1
+    echo "┣━ $msg"
+}
+
+# 显示错误提示
+showError(){
+    echoMsg "┣━ 无法识别对应命令 ( ┭┮﹏┭┮ )"
+    # 出错之后等待命令输入
+    control
 }
 
 # 等待命令输入
