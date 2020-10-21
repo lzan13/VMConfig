@@ -21,7 +21,6 @@ echo "┣━ a1.允许任何来源 0-NO 1-YES 允许任何来源，解决三方�
 echo "┣━ a2.显示文件路径 0-NO 1-YES"
 echo "┣━ a3.底部文件路径 0-NO 1-YES"
 echo "┣━ a4.调整启动台应用横向排列 Default-恢复默认 <int>-个数"
-echo "┣━ a5.调整启动台应用纵向排列 Default-恢复默认 <int>-个数"
 echo "┣━ "
 echo "┣━ f0.输出当前目录文件名到JSON 0-隐藏详情 1-输出详情"
 echo "┣━ "
@@ -145,7 +144,7 @@ echoMsg(){
 
 # 显示错误提示
 showError(){
-    echoMsg "┣━ 无法识别对应命令 ( ┭┮﹏┭┮ )"
+    echoMsg "无法识别对应命令 ( ┭┮﹏┭┮ )"
     # 出错之后等待命令输入
     control
 }
