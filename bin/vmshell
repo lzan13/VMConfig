@@ -32,7 +32,7 @@ echo "┣━━━━━━━━━━━━━━━━━━━━━━━�
 # 根据输入执行响应的操作
 control(){
     # 等待键盘输入,执行对应的命令,
-    read -p "┣━ 输入要执行的命令: " command arg1
+    read -p "┣━ 输入要执行的命令: " command arg1 arg2
     if [ ! -n "$arg1" ]; then
         arg1=1
     fi
@@ -46,9 +46,7 @@ control(){
         a3)
         showBottomPath $arg1;;
         a4)
-        setLauncherRows $arg1;;
-        a5)
-        setLauncherCols $arg1;;
+        setLauncherGrid $arg1 $arg2;;
         
         f0)
         echoFilenamesToJSON $arg1;;
@@ -102,22 +100,14 @@ showBottomPath(){
     killall Finder
 }
 
-# 调整启动台应用横向排列
-setLauncherRows(){
+# 调整启动台应用网格排列
+setLauncherGrid(){
     if [ $1 == Default ]; then
         defaults write com.apple.dock springboard-rows Default;
-    else
-        defaults write com.apple.dock springboard-rows -int $1;
-    fi
-    killall Dock
-}
-
-# 调整启动台应用纵向排列
-setLauncherRows(){
-    if [ $1 == Default ]; then
         defaults write com.apple.dock springboard-columns Default;
     else
-        defaults write com.apple.dock springboard-columns -int $1;
+        defaults write com.apple.dock springboard-rows -int $1;
+        defaults write com.apple.dock springboard-columns -int $2;
     fi
     killall Dock
 }
