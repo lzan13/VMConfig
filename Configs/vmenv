@@ -2,32 +2,35 @@
 export VMSHELL="$HOME/.vmconfig"
 export PATH=$PATH:$VMSHELL/bin
 
+### set jadx path
+export JADX="$HOME/Develop/Tools/jadx"
+export PATH=$PATH:$JADX/bin
+
+### set jdk path
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
+export PATH=$PATH:$JAVA_HOME/bin
+
 
 ### set Android sdk path
 export ANDROID_SDK="$HOME/Develop/Android/sdk"
-export PATH=$ANDROID_SDK:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$ANDROID_SDK/build-tools/28.0.3:$PATH
+export PATH=$PATH:$ANDROID_SDK:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$ANDROID_SDK/build-tools/28.0.3
 
 
 ### set Android ndk path
-export ANDROID_NDK="$HOME/Develop/Android/ndk"
-export PATH=$ANDROID_NDK:$PATH
+#export ANDROID_NDK="$HOME/Develop/Android/ndk"
+#export PATH=$PATH:$ANDROID_NDK
 
 
 ### set Flutter path
 #export FLUTTER="$HOME/Develop/Android/flutter/v1.9.1"
-export FLUTTER="$HOME/Develop/Android/flutter/v1.12.13"
-export PATH=$FLUTTER/bin:$PATH
-export PATH=$FLUTTER/bin/cache/dart-sdk/bin:$PATH
+#export FLUTTER="$HOME/Develop/Android/flutter/v1.12.13"
+#export PATH=$PATH:$FLUTTER/bin
+#export PATH=$PATH:$FLUTTER/bin/cache/dart-sdk/bin
 
 
 ### set Flutter china mirror image
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
-
-
-### set jadx path
-export JADX="$HOME/Develop/Tools/jadx"
-export PATH=$JADX/bin:$PATH
 
 
 ### nvm path
