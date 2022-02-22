@@ -24,6 +24,7 @@ alias adbd="adb devices"
 alias adbs="adb shell"
 alias adbvivo="adb -s 858a3e78"
 alias adboppo="adb -s 8e5afad7"
+alias adbmi="adb -s zxd65xfa7p4tamrk"
 
 ### keytool 相关命令
 alias kt4jks="keytool -list -v -keystore"
@@ -47,6 +48,7 @@ alias gbhr="git branch -r"
 ### git commit
 alias gct="git commit"
 alias gctm="git commit -m"
+alias gctad="git commit --amend -m"
 
 ### git checkout
 alias gck="git checkout"
@@ -95,6 +97,8 @@ alias grer="git remote remove"
 ### git reset
 alias grt="git reset"
 alias grthd="git reset --hard "
+alias grtm="git reset --mixed "
+alias grts="git reset --soft "
 
 ### git status
 alias gss="git status"
@@ -111,6 +115,11 @@ alias gshp="git stash pop"
 ### git tag
 alias gtg="git tag"
 alias gtgd="git tag -d"
+
+#################################################################
+### python 相关命令
+#################################################################
+alias python="/Library/Frameworks/Python.framework/Versions/3.9/bin/python3.9"
 
 
 ##################################################################
