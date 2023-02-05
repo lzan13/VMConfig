@@ -13,7 +13,7 @@ export PATH=$PATH:$JAVA_HOME/bin
 
 
 ### set Android sdk path
-export ANDROID_SDK="$HOME/Develop/Android/sdk"
+export ANDROID_SDK="$HOME/Library/Android/sdk"
 export PATH=$PATH:$ANDROID_SDK:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$ANDROID_SDK/build-tools/28.0.3
 
 
@@ -42,7 +42,8 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 
 ### nvm path
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
+### repo git source
+export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/'
