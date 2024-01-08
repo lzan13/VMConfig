@@ -53,8 +53,8 @@ alias gctad="git commit --amend -m"
 ### git checkout
 alias gck="git checkout"
 alias gckb="git checkout -b"
-alias gckd="git checkout develop"
-alias gckm="git checkout master"
+alias gckd="git checkout dev"
+alias gckm="git checkout main"
 
 ### git clone
 alias gce="git clone"
@@ -70,10 +70,10 @@ alias glgs="git log --stat"
 
 ### git merge/rebase
 alias gme="git merge"
-alias gmem="git merge master"
-alias gmed="git merge develop"
-alias gmeom="git merge origin/master"
-alias gmeod="git merge origin/develop"
+alias gmem="git merge main"
+alias gmed="git merge dev"
+alias gmeom="git merge origin/main"
+alias gmeod="git merge origin/dev"
 alias gre="git rebase"
 
 ### git fetch/push/pull
@@ -81,12 +81,12 @@ alias gfh="git fetch"
 alias gfho="git fetch origin"
 alias gpl="git pull"
 alias gplo="git pull origin"
-alias gplod="git pull origin develop"
-alias gplom="git pull origin master"
+alias gplod="git pull origin dev"
+alias gplom="git pull origin main"
 alias gph="git push"
 alias gpho="git push origin"
-alias gphod="git push origin develop"
-alias gphom="git push origin master"
+alias gphod="git push origin dev"
+alias gphom="git push origin main"
 
 ### git remote 
 alias gre="git remote"
