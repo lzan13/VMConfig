@@ -27,10 +27,9 @@ export PATH=$PATH:$ANDROID_SDK:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$A
 
 
 ### set Flutter path
-# #export FLUTTER="$HOME/Develop/Android/flutter/v1.9.1"
-# export FLUTTER="$HOME/Develop/SDK/Flutter/v2.0.3"
-# export PATH=$PATH:$FLUTTER/bin
-# export PATH=$PATH:$FLUTTER/bin/cache/dart-sdk/bin
+export FLUTTER="$HOME/Develop/SDK/Flutter/v3.16.8"
+export PATH=$PATH:$FLUTTER/bin
+export PATH=$PATH:$FLUTTER/bin/cache/dart-sdk/bin
 
 
 ### set Flutter china mirror image
