@@ -1,0 +1,165 @@
+{
+    "breadcrumbs.enabled": true, // 是否开启面包屑导航
+    "diffEditor.ignoreTrimWhitespace": false,
+
+    "docthis.authorName": "lzan13",
+    "docthis.includeMemberOfOnInterfaceMembers": false,
+    "docthis.includeMemberOfOnClassMembers": false,
+
+    // 编辑器文本大小
+    "editor.fontSize": 10,
+    // 每次保存自动格式化
+    "editor.formatOnSave": true,
+    // 控制编辑器在键入一行后是否自动格式化该行
+    "editor.formatOnType": true,
+    // 行数提示 on-开 off-关
+    "editor.lineNumbers": "on",
+    // 快速预览是否开启
+    "editor.minimap.enabled": true,
+    // 快速预览宽度
+    "editor.minimap.maxColumn": 72,
+    "editor.minimap.renderCharacters": false,
+    // 快速保存前延迟
+    "editor.quickSuggestionsDelay": 50,
+    // 编辑器格式化工具
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // 自动更新html标签
+    "editor.linkedEditing": true,
+    // 控制代码片段是否与其他建议一起显示及其排列的位置
+    "editor.snippetSuggestions": "top",
+    "editor.multiCursorModifier": "alt",
+    // 自动显示建议
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+    },
+    // Tab 补全
+    "editor.tabCompletion": "onlySnippets",
+    // tab宽度
+    "editor.tabSize": 4,
+    // 用空格键代替tab
+    "editor.insertSpaces": true,
+    // 控制是否在打开文件时，基于文件内容自动检测 #editor.tabSize# 和 #editor.insertSpaces#。
+    "editor.detectIndentation": false,
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "editor.formatOnPaste": true,
+    "editor.fontWeight": "bold",
+    "editor.autoIndent": "full",
+    "editor.wordWrap": "on",
+    "editor.fontFamily": "Monaco, 'Courier New', monospace",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "editor.stickyTabStops": true,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+
+    "emmet.syntaxProfiles": {
+        "vue-html": "html",
+        "vue": "html"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "vue-html": "html",
+        "vue": "html",
+        "javascript": "javascriptreact",
+        "wxml": "html"
+    },
+
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+
+    "files.autoSave": "onFocusChange",
+    "files.associations": {
+        "*.vue": "vue",
+        "*.wpy": "vue",
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript"
+    },
+
+    // git 配置
+    "git.autofetch": false,
+    "git.enableSmartCommit": false,
+    "git.confirmSync": false,
+
+    // 启用或禁用在 VS Code 中重命名或移动文件时自动更新导入路径的功能。always: 始终自动更新路径。
+    "javascript.updateImportsOnFileMove.enabled": "always",
+
+    // prettier 配置
+    "prettier.enable": true, // 启用 prettier
+    "prettier.bracketSpacing": true, //
+    "prettier.semi": false, // 分号结尾
+    "prettier.singleQuote": false, // 强制单引号
+    "prettier.singleAttributePerLine": true, // 属性换行
+    "prettier.tabWidth": 4, // tab大小
+    "prettier.trailingComma": "none", // 数组结尾逗号
+    "prettier.printWidth": 150, // 最大宽度
+
+    /**
+     * 控制如何处理在受信任的工作区中打开不受信任的文件
+     * 此设置也适用于通过 `#security.workspace.trust.emptyWindow#" 打开的空窗口中的文件。
+     * open: 始终允许不受信任的文件引入受信任的工作区，而不显示提示。
+     */
+    "security.workspace.trust.untrustedFiles": "open",
+    "settingsSync.ignoredExtensions": [],
+
+    // 终端配置
+    "terminal.external.osxExec": "/Applications/iTerm.app",
+    "terminal.integrated.fontSize": 12,
+
+    "typescript.updateImportsOnFileMove.enabled": "always",
+
+    // 是否展示欢迎页
+    "workbench.startupEditor": "welcomePage",
+    // 文件图标主题
+    "workbench.iconTheme": "material-icon-theme",
+    // 高亮显示修改的Tab
+    "workbench.editor.highlightModifiedTabs": true,
+    // 侧边栏位置
+    "workbench.sideBar.location": "left",
+    // 主题颜色
+    "workbench.colorTheme": "Default Dark+",
+    // 自定义颜色
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#363636",
+        "statusBar.foreground": "#69df69"
+    },
+
+    /**
+     * 各个语言格式化配置
+     */
+    // css 格式化配置
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // html 格式化配置
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // JavaScript 格式化配置
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // Json 格式化配置
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // scss 格式化配置
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // TypeScript 格式化配置
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // Vue 格式化配置
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    "workbench.editor.splitInGroupLayout": "vertical",
+    "window.zoomLevel": 1
+}
