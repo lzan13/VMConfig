@@ -7,13 +7,13 @@ export JetBrains="$HOME/Develop/Tools/JetBrains/Scripts"
 export PATH=$PATH:$JetBrains
 
 ### set jadx path
-export JADX="$HOME/Develop/Tools/jadx"
-export PATH=$PATH:$JADX/bin
+# export JADX="$HOME/Develop/Tools/jadx"
+# export PATH=$PATH:$JADX/bin
 
 # ### set jdk path
-# #export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
-# export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home"
-# export PATH=$PATH:$JAVA_HOME/bin
+#export JAVA_HOME="$Home/Develop/Tools/JetBrains/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+export JAVA_HOME="$Home/Develop/SDK/Java/jdk1.8/Contents/Home"
+export PATH=$PATH:$JAVA_HOME/bin
 
 
 ### set Android sdk path
@@ -22,8 +22,8 @@ export PATH=$PATH:$ANDROID_SDK:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$A
 
 
 ### set Android ndk path
-#export ANDROID_NDK="$HOME/Develop/Android/ndk"
-#export PATH=$PATH:$ANDROID_NDK
+export ANDROID_NDK="$HOME/Develop/SDK/Android/ndk-bundle"
+export PATH=$PATH:$ANDROID_NDK
 
 
 ### set Flutter path

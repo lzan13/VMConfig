@@ -64,7 +64,7 @@ plugins=(
   git 
 )
 
-source $ZSH/oh-my-zsh.sh
+source "$ZSH/oh-my-zsh.sh"
 
 # User configuration
 
@@ -99,10 +99,9 @@ source $ZSH/oh-my-zsh.sh
 DEFAULT_USER="lz"
 
 ### 加载自定义别名配置
-source ~/.vmconfig/Configs/vmalias
+source "$HOME/.vmconfig/Unix/config/vmalias"
 ### 加载环境变量配置
-source ~/.vmconfig/Configs/vmenv
+source "$HOME/.vmconfig/Unix/config/vmenv"
 
 ### 语法高亮
 # source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
