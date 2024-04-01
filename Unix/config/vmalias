@@ -28,6 +28,8 @@ alias adbmi="adb -s zxd65xfa7p4tamrk"
 ### scrcpy 投屏链接设备 -e 对应tcpip链接，-d 对应usb链接
 alias scrcpye="scrcpy -e -S -m 1080 --window-x=100 --window-y=100"
 alias scrcpyd="scrcpy -d -S -m 1080 --window-x=100 --window-y=100"
+alias scrcpysmax3="scrcpy -s 601519cc -S -m 1080 --window-x=100 --window-y=100"
+alias scrcpysnote10="scrcpy -s zxd65xfa7p4tamrk -S -m 1080 --window-x=100 --window-y=100"
 
 ### keytool 相关命令
 alias kt4jks="keytool -list -v -keystore"
