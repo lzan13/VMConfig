@@ -58,7 +58,7 @@ function gctad {git commit --amend -m $args}
 ### git checkout
 function gck {git checkout $args}
 function gckb {git checkout -b $args}
-function gckd {git checkout develop}
+function gckd {git checkout dev}
 function gckm {git checkout main}
 
 ### git clone
@@ -76,9 +76,9 @@ function glgs {git log --stat}
 ### git merge/rebase
 function gme {git merge $args}
 function gmem {git merge main}
-function gmed {git merge develop}
+function gmed {git merge dev}
 function gmeom {git merge origin/main}
-function gmeod {git merge origin/develop}
+function gmeod {git merge origin/dev}
 function gre {git rebase $args}
 
 ### git fetch/push/pull
@@ -86,11 +86,11 @@ function gfh {git fetch $args}
 function gfho {git fetch origin $args}
 function gpl {git pull $args}
 function gplo {git pull origin $args}
-function gplod {git pull origin develop}
+function gplod {git pull origin dev}
 function gplom {git pull origin main}
 function gph {git push $args}
 function gpho {git push origin $args}
-function gphod {git push origin develop}
+function gphod {git push origin dev}
 function gphom {git push origin main}
 
 ### git remote 
