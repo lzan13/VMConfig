@@ -25,6 +25,8 @@ function adbrm10p {adb -s zxd65xfa7p4tamrk $args}
 ### scrcpy 投屏链接设备 -e 对应tcpip链接，-d 对应usb链接
 function scrcpye {scrcpy -e -S -m 1080 --window-x=100 --window-y=100}
 function scrcpyd {scrcpy -d -S -m 1080 --window-x=100 --window-y=100}
+function scrcpysmax3 {scrcpy -s 601519cc -S -m 1080 --window-x=100 --window-y=100}
+function scrcpysnote10 {scrcpy -s zxd65xfa7p4tamrk -S -m 1080 --window-x=100 --window-y=100}
 
 ### cd 到工作目录
 function cdw {cd D:\Develop\Workspace}
