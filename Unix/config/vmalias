@@ -22,9 +22,8 @@ alias vcode="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/c
 ### adb devices
 alias adbd="adb devices"
 alias adbs="adb shell"
-alias adbvivo="adb -s 858a3e78"
-alias adboppo="adb -s 8e5afad7"
-alias adbmi="adb -s zxd65xfa7p4tamrk"
+alias adbnote10="adb -s zxd65xfa7p4tamrk"
+alias adbmax3="adb -s 601519cc"
 ### scrcpy 投屏链接设备 -e 对应tcpip链接，-d 对应usb链接
 alias scrcpye="scrcpy -e -S -m 1080 --window-x=100 --window-y=100"
 alias scrcpyd="scrcpy -d -S -m 1080 --window-x=100 --window-y=100"
