@@ -11,15 +11,16 @@ export PATH=$PATH:$JetBrains
 # export PATH=$PATH:$JADX/bin
 
 # ### set jdk path
-# export JAVA_HOME="/Users/edy/Develop/Tools/JetBrains/Applications/Android\ Studio.app/Contents/jbr/Contents/Home"
-# export JAVA_HOME="/Users/edy/Develop/SDK/Java/jdk1.8/Contents/Home"
-export JAVA_HOME="/Users/edy/Develop/SDK/Java/jdk17/Contents/Home"
+# export JAVA_HOME="/$HOME/Develop/Tools/JetBrains/Applications/Android\ Studio.app/Contents/jbr/Contents/Home"
+# export JAVA_HOME="/$HOME/Develop/SDK/Java/Jdk1.8/Contents/Home"
+# export JAVA_HOME="/$HOME/Develop/SDK/Java/Jdk17/Contents/Home"
+export JAVA_HOME="$HOME/Develop/SDK/Java/Jdk21/Contents/Home"
 export PATH=$PATH:$JAVA_HOME/bin
 
 
 ### set Android sdk path
 export ANDROID_SDK="$HOME/Develop/SDK/Android"
-export PATH=$PATH:$ANDROID_SDK:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$ANDROID_SDK/build-tools/34.0.0
+export PATH=$PATH:$ANDROID_SDK:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$ANDROID_SDK/build-tools/36.1.0
 
 
 ### set Android ndk path
