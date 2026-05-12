@@ -19,6 +19,8 @@ export PATH=$PATH:$ANDROID_HOME:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
 export ANDROID_NDK="$HOME/Develop/SDK/Android/ndk-bundle"
 export PATH=$PATH:$ANDROID_NDK
 
+### local bin
+export PATH=$PATH:"$HOME/.local/bin"
 
 ### nvm path
 export NVM_DIR="$HOME/.nvm"
