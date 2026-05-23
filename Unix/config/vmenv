@@ -2,6 +2,10 @@
 export VMSHELL="$HOME/.vmconfig/Unix"
 export PATH=$PATH:$VMSHELL/bin
 
+### set local bin path
+export LOCAL_BIN="$HOME/.local/bin"
+export PATH=$PATH:$LOCAL_BIN
+
 ### set jetbarins 脚本环境变量
 export JetBrains="$HOME/Develop/Tools/JetBrains/Scripts"
 export PATH=$PATH:$JetBrains
