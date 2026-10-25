@@ -10,9 +10,16 @@ export PATH=$PATH:$LOCAL_BIN
 export JetBrains="$HOME/Develop/Tools/JetBrains/Scripts"
 export PATH=$PATH:$JetBrains
 
-### set jadx path
-# export JADX="$HOME/Develop/Tools/jadx"
-# export PATH=$PATH:$JADX/bin
+### set JADX headless MCP jar (普通 jadx 仍由 Homebrew 管理)
+export REA_JADX_MCP_JAR="$HOME/Develop/SDK/JADX/jadx-headless-mcp-0.7.1-all.jar"
+
+### set Ghidra path
+export GHIDRA_INSTALL_DIR="$HOME/Develop/SDK/Ghidra/ghidra_12.1.4_PUBLIC"
+export PATH="$PATH:$GHIDRA_INSTALL_DIR:$GHIDRA_INSTALL_DIR/support"
+
+### set REA path
+export REA_HOME="$HOME/Develop/SDK/REA"
+export PATH="$PATH:$REA_HOME/node_modules/.bin"
 
 # ### set jdk path
 # export JAVA_HOME="/$HOME/Develop/Tools/JetBrains/Applications/Android\ Studio.app/Contents/jbr/Contents/Home"
